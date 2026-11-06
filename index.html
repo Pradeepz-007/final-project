@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#10251e">
+  <meta name="description" content="A visual guide to Karnataka's heritage, hills, waterfalls, beaches and food. Find your next journey.">
+  <title>Explore Karnataka — A journey through the extraordinary</title>
+  <link rel="preconnect" href="https://images.unsplash.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header" id="top">
+    <a class="brand" href="#top" aria-label="Explore Karnataka home"><span class="brand-mark">K</span><span>EXPLORE <b>KARNATAKA</b></span></a>
+    <button class="menu-toggle" aria-label="Open navigation" aria-expanded="false"><span></span><span></span></button>
+    <nav class="main-nav" aria-label="Main navigation">
+      <a href="#destinations">Destinations</a><a href="#experiences">Experiences</a><a href="#food">Local flavours</a><a href="#travel-info">Plan your trip</a>
+    </nav>
+    <a class="nav-cta" href="#destinations">Find your escape <span>↗</span></a>
+  </header>
+
+  <main>
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-image" role="img" aria-label="Lush green hills in Karnataka"></div>
+      <div class="hero-shade"></div>
+      <div class="hero-content">
+        <p class="eyebrow"><span class="eyebrow-line"></span> SOUTH INDIA, IN FULL COLOUR</p>
+        <h1 id="hero-title">A little closer<br>to <em>wonder.</em></h1>
+        <p class="hero-copy">Ancient stories, wild landscapes, slow mornings.<br>Karnataka has a way of staying with you.</p>
+        <a class="button button-light" href="#destinations">Explore the state <span>↓</span></a>
+      </div>
+      <div class="hero-note"><span class="note-dot"></span> 30 districts · countless ways to wander</div>
+      <a class="hero-scroll" href="#intro" aria-label="Scroll to discover">SCROLL TO DISCOVER <span>↓</span></a>
+      <div class="hero-pagination"><span>01</span><i></i><span>04</span></div>
+    </section>
+
+    <section class="intro section-wrap" id="intro">
+      <div class="intro-kicker"><span>01</span><span class="kicker-rule"></span><span>THE MANY SIDES OF KARNATAKA</span></div>
+      <div class="intro-grid">
+        <h2>One state.<br><em>Endless moods.</em></h2>
+        <div class="intro-text"><p>Wake up in a coffee-scented hill town. Wander through a lost empire by afternoon. End the day beside the sea.</p><a class="text-link" href="#experiences">Find your kind of journey <span>↗</span></a></div>
+      </div>
+      <div class="experience-strip" id="experiences">
+        <a class="experience-tile exp-heritage" href="#destinations" data-quick-filter="Heritage"><span>01 / HISTORY</span><b>Walk through<br>another time</b><i>↗</i></a>
+        <a class="experience-tile exp-nature" href="#destinations" data-quick-filter="Nature"><span>02 / THE WILD</span><b>Take the<br>scenic route</b><i>↗</i></a>
+        <a class="experience-tile exp-coast" href="#destinations" data-quick-filter="Coast"><span>03 / COASTAL DAYS</span><b>Let the tide<br>set the pace</b><i>↗</i></a>
+      </div>
+    </section>
+
+    <section class="destinations-section" id="destinations">
+      <div class="section-wrap">
+        <div class="section-heading">
+          <div><div class="intro-kicker"><span>02</span><span class="kicker-rule"></span><span>PLACES TO BEGIN</span></div><h2>Where will you <em>go?</em></h2></div>
+          <button class="text-link favorite-filter" id="favorite-filter" aria-pressed="false">♡ <span>Show favourites</span></button>
+        </div>
+        <div class="discovery-tools">
+          <label class="search-box"><span class="search-icon">⌕</span><input type="search" id="place-search" placeholder="Search a place, district or feeling…" aria-label="Search destinations"><kbd>⌘ K</kbd></label>
+          <label class="select-wrap"><span class="sr-only">Filter by experience</span><select id="category-filter"><option value="all">All experiences</option><option value="Heritage">History & heritage</option><option value="Hill station">Hill stations</option><option value="Waterfall">Waterfalls</option><option value="Coast">Coast & beaches</option><option value="Nature">Nature & wildlife</option><option value="City">City escapes</option><option value="Food">Local food</option></select><span>⌄</span></label>
+          <label class="select-wrap"><span class="sr-only">Filter by district</span><select id="district-filter"><option value="all">All districts</option></select><span>⌄</span></label>
+          <button class="shuffle-button" id="random-place"><span>✳</span> Surprise me</button>
+        </div>
+        <div class="results-meta"><span id="results-count">Showing destinations</span><button id="clear-filters" class="clear-button">Clear filters <span>×</span></button></div>
+        <div class="destination-grid" id="destination-grid" aria-live="polite"></div>
+        <div class="empty-state" id="empty-state" hidden><span>✳</span><h3>No places found</h3><p>Try a different name or clear your filters.</p></div>
+      </div>
+    </section>
+
+    <section class="planner-section section-wrap" id="travel-info">
+      <div class="planner-photo"><img src="https://images.unsplash.com/photo-1739038034755-da0dd12de467?auto=format&fit=crop&w=2200&q=90" alt="Clouds rolling over the hills of Chikmagalur" loading="lazy"><div class="photo-caption">CHIKMAGALUR · THE WESTERN GHATS</div></div>
+      <div class="planner-card glass-panel">
+        <div class="intro-kicker"><span>03</span><span class="kicker-rule"></span><span>YOUR NEXT GETAWAY</span></div>
+        <h2>Make room<br>for <em>the road.</em></h2>
+        <p class="planner-copy">A quick estimate to help your travel plans take shape. Adjust the days and travel style to see a rough per-person budget.</p>
+        <div class="budget-controls">
+          <label for="days-range">Trip length <strong><span id="days-value">3</span> days</strong></label>
+          <input id="days-range" type="range" min="1" max="14" value="3">
+          <label for="travellers-range">Travellers <strong><span id="travellers-value">2</span> people</strong></label>
+          <input id="travellers-range" type="range" min="1" max="8" value="2">
+          <label for="travel-style">Travel style</label>
+          <select id="travel-style"><option value="budget">Easy on the pocket</option><option value="comfort" selected>Comfortable</option><option value="premium">A little extra</option></select>
+        </div>
+        <div class="budget-total"><div><small>ESTIMATED TOTAL</small><strong id="budget-total">₹ 18,000</strong></div><span>for <b id="budget-people">2</b> travellers</span></div>
+        <p class="budget-note">Indicative estimate only. Transport, season and destination can change costs.</p>
+      </div>
+    </section>
+
+    <section class="food-section" id="food">
+      <div class="food-image" role="img" aria-label="Mysore dosa served with chutneys"></div>
+      <div class="food-overlay"></div>
+      <div class="food-copy section-wrap"><div class="intro-kicker"><span>04</span><span class="kicker-rule"></span><span>A TABLE FULL OF STORIES</span></div><p class="food-label">THE TASTE OF KARNATAKA</p><h2>Come hungry.<br><em>Leave happy.</em></h2><p>From a crisp Mysore dosa to a rich, ghee-kissed Mysore pak, every region has something worth slowing down for.</p><a class="button button-outline" href="#gallery">See what’s cooking <span>↗</span></a></div>
+      <div class="food-side-note">LOCAL FLAVOURS · SERVED WITH HEART</div>
+    </section>
+
+    <section class="gallery-section section-wrap" id="gallery">
+      <div class="section-heading gallery-heading"><div><div class="intro-kicker"><span>05</span><span class="kicker-rule"></span><span>POSTCARDS FROM KARNATAKA</span></div><h2>Take a look <em>around.</em></h2></div><div class="gallery-arrows"><button id="gallery-prev" aria-label="Previous photo">←</button><button id="gallery-next" aria-label="Next photo">→</button></div></div>
+      <div class="gallery-track" id="gallery-track"></div>
+    </section>
+
+    <section class="travel-info-section section-wrap">
+      <div class="info-heading"><div class="intro-kicker"><span>06</span><span class="kicker-rule"></span><span>GOOD TO KNOW</span></div><h2>Go well.<br><em>Travel easy.</em></h2></div>
+      <div class="info-list">
+        <details open><summary><span>01</span> When should I visit?<b>＋</b></summary><p>October to March is pleasant for most destinations. Monsoon brings dramatic waterfalls and lush hills, while some treks and roads may need extra care.</p></details>
+        <details><summary><span>02</span> Getting around<b>＋</b></summary><p>Bengaluru, Mysuru and Mangaluru connect to many destinations by rail and road. For remote nature spots, check local transport and road conditions before setting out.</p></details>
+        <details><summary><span>03</span> A little local etiquette<b>＋</b></summary><p>At temples and heritage sites, dress respectfully and follow posted photography guidance. Carry water, take your waste with you and leave wildlife undisturbed.</p></details>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><a class="brand" href="#top"><span class="brand-mark">K</span><span>EXPLORE <b>KARNATAKA</b></span></a><span>Made for the curious. <span class="footer-heart">♥</span></span><a href="#top" class="back-top">BACK TO TOP ↑</a></footer>
+  <dialog class="lightbox" id="lightbox"><button class="lightbox-close" aria-label="Close image">×</button><img id="lightbox-image" alt=""><div id="lightbox-caption"></div></dialog>
+</body>
+</html>
